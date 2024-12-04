@@ -1,0 +1,49 @@
+name: domain
+description: A new Flutter package project
+version: 0.0.1
+
+environment:
+  sdk: '>=3.4.4 <4.0.0'
+
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # current module dependencies
+  cupertino_icons: ^1.0.6
+  flutter_localizations:
+    sdk: flutter
+
+  intl: ^0.19.0
+  get: ^4.6.6
+  json_annotation: ^4.8.1
+
+  # shared
+  injectable: ^2.3.2
+  get_it: ^7.6.7
+  logger: ^2.0.2+1
+
+
+  # projects
+  di:
+    path: '../di'
+  core_testing:
+    path: '../core_testing'
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  build_runner: ^2.4.8
+  flutter_gen_runner: any
+  json_serializable: ^6.7.1
+  injectable_generator: ^2.4.1
+  mockito: ^5.4.4
+
+
+flutter:
+  generate: true
+
+flutter_intl:
+  enabled: true

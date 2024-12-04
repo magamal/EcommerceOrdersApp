@@ -1,0 +1,41 @@
+name: data
+description: A new Flutter package project
+version: 0.0.1
+
+environment:
+  sdk: '>=3.4.4 <4.0.0'
+
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # current module dependencies
+  json_annotation: ^4.8.1
+  # shared
+  injectable: ^2.3.2
+  get_it: ^7.6.7
+  logger: ^2.0.2+1
+
+
+  # projects
+  domain:
+    path: '../domain'
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  build_runner: ^2.4.8
+  flutter_gen_runner: any
+  json_serializable: ^6.7.1
+  injectable_generator: ^2.4.1
+  mockito: ^5.4.4
+
+
+flutter:
+  generate: true
+#  uses-material-design: true
+  assets:
+#    - assets/data/
+    - assets/data/orders.json
