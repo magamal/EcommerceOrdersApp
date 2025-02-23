@@ -1,4 +1,5 @@
 import 'package:app/gen/assets.gen.dart';
+import 'package:app/generated/l10n.dart';
 import 'package:app/src/resources/resources.dart';
 import 'package:app/src/routes/routes.dart';
 import 'package:app/src/ui/home/controller/orders_cubit.dart';
@@ -12,6 +13,10 @@ import 'package:go_router/go_router.dart';
 import 'statistics_item_widget.dart';
 
 class OrdersPage extends StatefulWidget {
+  static const totalOrdersKey = Key("total_orders");
+  static const loadingWidgetKey = Key("loading");
+  static const errorWidgetKey = Key("error");
+
   const OrdersPage({super.key});
 
   @override
@@ -43,8 +48,10 @@ class _OrdersPageState extends State<OrdersPage> {
           ordersStatistics: (state) => statisticsWidget(state.statistics),
           error: (state) => errorWidget()));
 
-  progress() =>
-      const Center(child: CircularProgressIndicator(color: AppColors.red));
+  progress() => const Center(
+        key: OrdersPage.loadingWidgetKey,
+        child: CircularProgressIndicator(color: AppColors.red),
+      );
 
   statisticsWidget(OrdersStatisticsModel statistics) => Column(
         children: [
@@ -59,7 +66,9 @@ class _OrdersPageState extends State<OrdersPage> {
         ],
       );
 
-  errorWidget() => Center(child: Text(context.localZ.somethingWentWrong));
+  errorWidget() => Center(
+      key: OrdersPage.errorWidgetKey,
+      child: Text(S.current.somethingWentWrong));
 
   totalOrders(int totalCount) => SizedBox(
         width: double.infinity,
@@ -86,6 +95,7 @@ class _OrdersPageState extends State<OrdersPage> {
               ),
             ),
             Text(
+              key: OrdersPage.totalOrdersKey,
               "$totalCount",
               style: const TextStyle(
                   color: AppColors.black,
@@ -93,7 +103,7 @@ class _OrdersPageState extends State<OrdersPage> {
                   fontWeight: FontWeight.w900),
             ),
             Text(
-              context.localZ.totalOrders,
+              S.current.totalOrders,
               style: const TextStyle(
                   color: AppColors.black,
                   fontSize: 24,
@@ -111,13 +121,13 @@ class _OrdersPageState extends State<OrdersPage> {
       );
 
   averagePrice(double price) => StatisticsItemWidget(
-        title: context.localZ.averagePrice,
+        title: S.current.averagePrice,
         value: price.floor().toString(),
         assetName: Assets.images.priceAverage,
       );
 
   returnedOrders(int price) => StatisticsItemWidget(
-        title: context.localZ.returnedOrders,
+        title: S.current.returnedOrders,
         value: price.toString(),
         assetName: Assets.images.canceledOrders,
       );
@@ -134,7 +144,7 @@ class _OrdersPageState extends State<OrdersPage> {
                 padding: EdgeInsets.symmetric(vertical: 8),
                 child: Center(
                   child: Text(
-                    context.localZ.showGraph,
+                    S.current.showGraph,
                     style: const TextStyle(
                       color: AppColors.white,
                       fontSize: 18,

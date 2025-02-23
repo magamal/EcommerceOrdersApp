@@ -1,1 +1,12 @@
-{}
+{
+  "@@locale": "en",
+  "app_name": "Ecommerce Orders",
+  "totalOrders": "Total orders",
+  "returnedOrders": "Returned orders",
+  "averagePrice": "Average price",
+  "showGraph": "Show graph",
+  "graph": "Graph",
+  "month": "Month",
+  "numberOfOrdersPerMonth": "Orders",
+  "somethingWentWrong": "Something went wrong"
+}

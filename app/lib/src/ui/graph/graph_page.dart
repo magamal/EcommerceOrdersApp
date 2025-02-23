@@ -1,3 +1,4 @@
+import 'package:app/generated/l10n.dart';
 import 'package:app/src/resources/resources.dart';
 import 'package:app/src/ui/graph/controller/graph_cubit.dart';
 import 'package:domain/domain.dart';
@@ -36,7 +37,7 @@ class _GraphPageState extends State<GraphPage> {
           icon: const Icon(Icons.arrow_back),
           onPressed: () => context.pop(),
         ),
-        title: Text(context.localZ.graph),
+        title: Text(S.current.graph),
       );
 
   body() => BlocBuilder(
@@ -69,7 +70,7 @@ class _GraphPageState extends State<GraphPage> {
               const EdgeInsetsDirectional.only(top: 8, start: 8, bottom: 4),
           child: Align(
             alignment: AlignmentDirectional.centerStart,
-            child: Text(context.localZ.numberOfOrdersPerMonth),
+            child: Text(S.current.numberOfOrdersPerMonth),
           ),
         ),
         SizedBox(
@@ -77,7 +78,7 @@ class _GraphPageState extends State<GraphPage> {
           child: SfCartesianChart(
             primaryXAxis: CategoryAxis(
               title: AxisTitle(
-                text: context.localZ.month,
+                text: S.current.month,
                 alignment: ChartAlignment.far,
               ),
             ),
@@ -103,5 +104,5 @@ class _GraphPageState extends State<GraphPage> {
     );
   }
 
-  errorWidget() => Center(child: Text(context.localZ.somethingWentWrong));
+  errorWidget() => Center(child: Text(S.current.somethingWentWrong));
 }

@@ -49,6 +49,96 @@ class S {
   static S? maybeOf(BuildContext context) {
     return Localizations.of<S>(context, S);
   }
+
+  /// `Ecommerce Orders`
+  String get app_name {
+    return Intl.message(
+      'Ecommerce Orders',
+      name: 'app_name',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Total orders`
+  String get totalOrders {
+    return Intl.message(
+      'Total orders',
+      name: 'totalOrders',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Returned orders`
+  String get returnedOrders {
+    return Intl.message(
+      'Returned orders',
+      name: 'returnedOrders',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Average price`
+  String get averagePrice {
+    return Intl.message(
+      'Average price',
+      name: 'averagePrice',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Show graph`
+  String get showGraph {
+    return Intl.message(
+      'Show graph',
+      name: 'showGraph',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Graph`
+  String get graph {
+    return Intl.message(
+      'Graph',
+      name: 'graph',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Month`
+  String get month {
+    return Intl.message(
+      'Month',
+      name: 'month',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Orders`
+  String get numberOfOrdersPerMonth {
+    return Intl.message(
+      'Orders',
+      name: 'numberOfOrdersPerMonth',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Something went wrong`
+  String get somethingWentWrong {
+    return Intl.message(
+      'Something went wrong',
+      name: 'somethingWentWrong',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
