@@ -22,17 +22,16 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-        "app_name": MessageLookupByLibrary.simpleMessage("Ecommerce Orders"),
-        "averagePrice": MessageLookupByLibrary.simpleMessage("Average price"),
-        "graph": MessageLookupByLibrary.simpleMessage("Graph"),
-        "month": MessageLookupByLibrary.simpleMessage("Month"),
-        "numberOfOrdersPerMonth":
-            MessageLookupByLibrary.simpleMessage("Orders"),
-        "returnedOrders":
-            MessageLookupByLibrary.simpleMessage("Returned orders"),
-        "showGraph": MessageLookupByLibrary.simpleMessage("Show graph"),
-        "somethingWentWrong":
-            MessageLookupByLibrary.simpleMessage("Something went wrong"),
-        "totalOrders": MessageLookupByLibrary.simpleMessage("Total orders")
-      };
+    "app_name": MessageLookupByLibrary.simpleMessage("Ecommerce Orders"),
+    "averagePrice": MessageLookupByLibrary.simpleMessage("Average price"),
+    "graph": MessageLookupByLibrary.simpleMessage("Graph"),
+    "month": MessageLookupByLibrary.simpleMessage("Month"),
+    "numberOfOrdersPerMonth": MessageLookupByLibrary.simpleMessage("Orders"),
+    "returnedOrders": MessageLookupByLibrary.simpleMessage("Returned orders"),
+    "showGraph": MessageLookupByLibrary.simpleMessage("Show graph"),
+    "somethingWentWrong": MessageLookupByLibrary.simpleMessage(
+      "Something went wrong",
+    ),
+    "totalOrders": MessageLookupByLibrary.simpleMessage("Total orders"),
+  };
 }

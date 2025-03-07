@@ -18,7 +18,7 @@ Future<void> _configureCoreTestingDependencies(
 @visibleForTesting
 Future<void> configureTestingDependencies() async {
   const environment = Environment.test;
-  // di.getIt.allowReassignment = true;
+  di.getIt.allowReassignment = true;
   await di.configureDependencies(environment: environment);
   await _configureCoreTestingDependencies(di.getIt, environment);
 }

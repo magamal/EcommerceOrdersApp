@@ -40,6 +40,8 @@ dependencies:
     path: '../di'
   core_testing:
     path: '../core_testing'
+  data:
+    path: '../data'
 
 
 dev_dependencies:
@@ -53,6 +55,7 @@ dev_dependencies:
   json_serializable: ^6.7.1
   injectable_generator: ^2.4.1
   mockito: ^5.4.4
+  bdd_widget_test: ^1.7.4
 
 
 flutter:

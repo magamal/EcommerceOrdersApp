@@ -122,7 +122,7 @@ class _OrdersPageState extends State<OrdersPage> {
 
   averagePrice(double price) => StatisticsItemWidget(
         title: S.current.averagePrice,
-        value: price.floor().toString(),
+        value: price.ceil().toString(),
         assetName: Assets.images.priceAverage,
       );
 
